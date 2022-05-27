@@ -1,0 +1,3 @@
+<template>
+    peliculas nuevas
+</template>
