@@ -12,7 +12,7 @@ import Materialize from "materialize-css/dist/js/materialize.js"
 export default {
   name: "App",
   components: {
-    NavBar
+    NavBar,
   },
   mounted() {
     Materialize.AutoInit();
@@ -20,6 +20,3 @@ export default {
 };
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-</style>

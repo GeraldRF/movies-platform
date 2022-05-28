@@ -1,10 +1,11 @@
-import VueRouter, { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
-import Billboard from "../views/Billboard.vue";
-import NewMovies from "../views/NewMovies.vue";
-import Populars from "../views/Populars.vue";
+import Home from "@/views/Home.vue";
+import About from "@/views/About.vue";
+import Billboard from "@/views/Billboard.vue";
+import NewMovies from "@/views/NewMovies.vue";
+import Populars from "@/views/Populars.vue";
+import MovieDetails from "@/components/MovieDetails.vue"
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     path: "/populares",
     name: "Populars",
     component: Populars,
+  },
+  {
+    path: "/detalles/:id/:movieName",
+    name: "MovieDetails",
+    component: MovieDetails,
   },
 ];
 
