@@ -6,6 +6,7 @@ import Billboard from "@/views/Billboard.vue";
 import NewMovies from "@/views/NewMovies.vue";
 import Populars from "@/views/Populars.vue";
 import MovieDetails from "@/components/MovieDetails.vue"
+import SearchMovie from "@/views/SearchMovie"
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
     path: "/detalles/:id/:movieName",
     name: "MovieDetails",
     component: MovieDetails,
+  },
+  {
+    path: "/busqueda",
+    name: "SearchMovie",
+    component: SearchMovie
   },
 ];
 

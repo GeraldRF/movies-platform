@@ -10,16 +10,21 @@
       >
       <ul class="right hide-on-med-and-down">
         <li>
-          <form class="row search-form">
+          <div class="row search-form">
             <input
               class="col m7 offset-m3 xl9 border-orange white-text"
               type="text"
               placeholder="Buscar pelicula"
+              ref="searchBarDesktop"
+              v-model="this.search"
             />
-            <button class="btn-floating deep-orange lighten-1">
+            <router-link
+              :to="{ name: 'SearchMovie', query: { q: this.search }, }"
+              class="btn-floating deep-orange lighten-1 link"
+            >
               <i class="material-icons col m2 xl3">search</i>
-            </button>
-          </form>
+            </router-link>
+          </div>
         </li>
         <li>
           <router-link to="/peliculas-nuevas" class="text-l"
@@ -38,19 +43,23 @@
       </ul>
     </div>
   </nav>
-
   <ul class="sidenav deep-purple lighten-1" id="mobile-demo">
     <li>
-      <form class="row search-form">
+      <div class="row search-form">
         <input
           class="col s8 offset-s1 border-orange white-text"
           type="text"
           placeholder="Buscar pelicula"
+          ref="searchBarMobile"
+          v-model="this.search"
         />
-        <button class="btn-floating deep-orange lighten-1">
-          <i class="material-icons col s3">search</i>
-        </button>
-      </form>
+        <router-link
+              :to="{ name: 'SearchMovie', query: { q: this.search }, }"
+              class="btn-floating deep-orange lighten-1 link"
+            >
+              <i class="material-icons col m2 xl3">search</i>
+            </router-link>
+      </div>
     </li>
     <li>
       <router-link to="/peliculas-nuevas" class="white-text text-l"
@@ -78,6 +87,11 @@
 <script>
 export default {
   name: "NavBar",
+  data() {
+    return {
+      search: "",
+    };
+  },
 };
 </script>
 

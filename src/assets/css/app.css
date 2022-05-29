@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css?family=DotGothic16");
 
 /* Lobster - Press Start 2P - Luckiest Guy*/
+img {
+  width: 100%;
+  display: block;
+}
 .text-bold {
   font-weight: bolder;
   font-family: "Press Start 2P";
@@ -18,9 +22,14 @@
 
 .search-form {
   margin-top: 40px;
+  display: flex;
+  align-items: flex-end;
 }
 .search-form input {
   border-bottom-color: #ff7043 !important;
+}
+.btn-floating {
+  margin-right: 0 !important;
 }
 
 @media screen and (min-width: 993px) {
@@ -33,9 +42,8 @@
   .search-form.row .col {
     float: none !important;
   }
-  .search-form button i {
+  .search-form .link i {
     position: relative;
-    top: -18px;
     right: 3px !important;
     width: 40px !important;
     height: 29px !important;
@@ -62,6 +70,15 @@
   align-items: center;
   justify-content: center;
 }
+.pagination > li > input {
+  width: 50px !important;
+  text-align: center;
+  border: #7e57c2 .5px solid !important;
+  background-color: rgb(255, 255, 255) !important;
+  color: #7e57c2;
+  font-weight: 600;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.527) !important;
+}
 
 @media screen and (min-width: 900px) {
   .pagination li:nth-of-type(1) a::after {
@@ -71,3 +88,120 @@
     content: "pagina siguiente";
   }
 }
+
+.card-image h2 {
+  font-size: 2.4em !important;
+  font-weight: bolder !important;
+  text-align: center;
+  color: #7e57c2 !important;
+  background-color: rgba(240, 248, 255, 0.719);
+  text-shadow: 1px 1px 4px rgb(255, 255, 255) !important;
+}
+
+.card-image img {
+  height: 350px;
+  display: block;
+}
+.card-image {
+  height: 350px !important;
+}
+.card-content {
+  position: relative;
+  overflow: visible;
+}
+/* .rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  right: 10px;
+  top: -35px;
+
+  width: 80px;
+  height: 80px;
+
+  font-size: 1.7em;
+  font-weight: 500;
+
+  color: rgb(255, 255, 255);
+
+  filter: drop-shadow(1px 1px 4px #000000);
+
+  background-image: url("../images/star.png");
+  background-repeat: no-repeat;
+  background-size: 80px;
+} */
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: -35px;
+  width: 70px;
+  height: 70px;
+  background-color: #ff7043;
+  border-radius: 100%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.575);
+  font-size: 2em;
+  font-weight: 500;
+
+  color: rgb(255, 255, 255);
+}
+.data-container:nth-of-type(1) div {
+  height: 100px;
+  overflow: auto;
+  margin: 0 0 10px 0;
+}
+.data-container:nth-of-type(2) div {
+  margin: 0 0 10px 0;
+}
+.data-container div p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.63);
+}
+
+.data-container div::-webkit-scrollbar, .genre-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border: solid 0.4px rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.data-container div::-webkit-scrollbar-thumb, .genre-container::-webkit-scrollbar-thumb {
+  background: #7e57c2b2;
+  border-radius: 10px;
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.87);
+}
+
+.genre-container {
+  width: 100%;
+  display: flex;
+  gap: 3px;
+  overflow: auto;
+}
+.genre {
+  width: max-content;
+  height: max-content;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.not-found{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+.not-found h4 {
+  text-align: center;
+  color:#7e57c2
+}
+.not-found div {
+  width: 200px;
+}
+
