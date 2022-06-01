@@ -28,7 +28,7 @@
         </div>
         <div class="genre-container">
           <div
-            class="deep-purple lighten-1 white-text genre"
+            class="cyan darken-4 white-text genre"
             v-for="genre in movie.genre_ids"
             :key="genre"
           >

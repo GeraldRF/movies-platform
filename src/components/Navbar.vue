@@ -1,9 +1,9 @@
 <template>
-  <nav class="deep-purple lighten-1">
+  <nav class="cyan darken-4">
     <div class="nav-wrapper">
       <router-link to="/" class="brand-logo">
         <span class="text-light">Movie</span
-        ><span class="text-bold deep-orange lighten-1">TOON</span>
+        ><span class="text-bold light-green darken-3">TOON</span>
       </router-link>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"
         ><i class="material-icons">menu</i></a
@@ -20,7 +20,7 @@
             />
             <router-link
               :to="{ name: 'SearchMovie', query: { q: this.search }, }"
-              class="btn-floating deep-orange lighten-1 link"
+              class="btn-floating light-green darken-3 link"
             >
               <i class="material-icons col m2 xl3">search</i>
             </router-link>
@@ -43,7 +43,7 @@
       </ul>
     </div>
   </nav>
-  <ul class="sidenav deep-purple lighten-1" id="mobile-demo">
+  <ul class="sidenav cyan darken-4" id="mobile-demo">
     <li>
       <div class="row search-form">
         <input
@@ -55,7 +55,7 @@
         />
         <router-link
               :to="{ name: 'SearchMovie', query: { q: this.search }, }"
-              class="btn-floating deep-orange lighten-1 link"
+              class="btn-floating light-green darken-3 link"
             >
               <i class="material-icons col m2 xl3">search</i>
             </router-link>

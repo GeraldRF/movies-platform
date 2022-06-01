@@ -8,7 +8,7 @@
   <ul v-show="this.currentPage > 1" class="pagination center-align">
     <li
       :class="{
-         'waves-effect btn deep-purple lighten-1': this.currentPage != 1
+         'waves-effect btn cyan darken-4': this.currentPage != 1
          }"
     >
       <a href="#" @click="selectPage('-1')" class="white-text"
@@ -22,7 +22,7 @@
       :class="
         this.currentPage == this.maxPage
           ? ''
-          : 'waves-effect btn deep-purple lighten-1'
+          : 'waves-effect btn cyan darken-4'
       "
     >
       <a class="white-text" href="#" @click="selectPage('+1')"
@@ -38,7 +38,7 @@
   <ul v-show="maxPage != 0" class="pagination center-align">
     <li
       :class="{
-         'waves-effect btn-short deep-purple lighten-1': this.currentPage != 1
+         'waves-effect btn-short cyan darken-4': this.currentPage != 1
          }
       "
     >
@@ -60,7 +60,7 @@
       :class="
         this.currentPage == this.maxPage
           ? ''
-          : 'waves-effect btn deep-purple lighten-1'
+          : 'waves-effect btn cyan darken-4'
       "
     >
       <a class="white-text" href="#" @click="selectPage('+1')"
