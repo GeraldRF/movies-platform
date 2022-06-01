@@ -89,22 +89,33 @@ img {
   }
 }
 
-.card-image h2 {
-  font-size: 2.4em !important;
-  font-weight: bolder !important;
-  text-align: center;
-  color: #7e57c2 !important;
-  background-color: rgba(240, 248, 255, 0.719);
-  text-shadow: 1px 1px 4px rgb(255, 255, 255) !important;
+.card {
+  border-radius: 10px !important;
+  margin: 10px !important;
 }
 
-.card-image img {
-  height: 350px;
+.card-title {
+  font-size: 1.2em !important;
+  text-align: center;
+  color: #7e57c2 !important;
+}
+
+.img-card img {
+  height: 100%;
+  width: 100%;
   display: block;
+  border-radius: 10px 0 0 10px !important;
 }
-.card-image {
-  height: 350px !important;
+.img-card {
+  height: 320px !important;
+  padding: 0 !important;
 }
+@media screen and (min-width:500px){
+  .img-card {
+    height: 380px !important;
+  }
+}
+
 .card-content {
   position: relative;
   overflow: visible;
@@ -158,8 +169,12 @@ img {
   margin: 0 0 10px 0;
 }
 .data-container div p {
+  font-size: 0.9em;
   margin: 0;
   color: rgba(0, 0, 0, 0.63);
+}
+.data-container h6 {
+  font-size: 1em;
 }
 
 .data-container div::-webkit-scrollbar, .genre-container::-webkit-scrollbar {
@@ -183,10 +198,13 @@ img {
   overflow: auto;
 }
 .genre {
-  width: max-content;
-  height: max-content;
+  width: fit-content;
+  height: 30px;
   padding: 4px;
   border-radius: 10px;
+}
+.genre-container span {
+  font-size: .9em;
 }
 
 .not-found{
