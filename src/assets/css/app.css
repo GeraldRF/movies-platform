@@ -73,7 +73,7 @@ img {
 .pagination > li > input {
   width: 50px !important;
   text-align: center;
-  border: #7e57c2 .5px solid !important;
+  border: #7e57c2 0.5px solid !important;
   background-color: rgb(255, 255, 255) !important;
   color: #7e57c2;
   font-weight: 600;
@@ -110,7 +110,7 @@ img {
   height: 320px !important;
   padding: 0 !important;
 }
-@media screen and (min-width:500px){
+@media screen and (min-width: 500px) {
   .img-card {
     height: 380px !important;
   }
@@ -148,18 +148,33 @@ img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: -10px;
-  top: -10px;
-  width: 50px;
-  height: 50px;
-  background-color: #ff7043;
-  border-radius: 100%;
+  left: 0px;
+  top: 0px;
+  width: 80px;
+  height: 30px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #00000077;
+  border: #ff7043;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.575);
   font-size: 1.4em;
   font-weight: 500;
 
   color: rgb(255, 255, 255);
 }
+.rating span {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating span::before {
+  content: "\2605";
+  width: 25px;
+  font-size: 24px;
+  color: yellow;
+}
+
 .data-container:nth-of-type(1) div {
   height: 100px;
   overflow: auto;
@@ -176,7 +191,7 @@ img {
 .data-container h6 {
   font-size: 1em;
 }
-@media screen and (min-width:500px){
+@media screen and (min-width: 500px) {
   .card-title {
     font-size: 1.5em !important;
   }
@@ -192,7 +207,8 @@ img {
   }
 }
 
-.data-container div::-webkit-scrollbar, .genre-container::-webkit-scrollbar {
+.data-container div::-webkit-scrollbar,
+.genre-container::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   border: solid 0.4px rgba(0, 0, 0, 0.212);
@@ -200,7 +216,8 @@ img {
 
   box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-.data-container div::-webkit-scrollbar-thumb, .genre-container::-webkit-scrollbar-thumb {
+.data-container div::-webkit-scrollbar-thumb,
+.genre-container::-webkit-scrollbar-thumb {
   background: #7e57c2b2;
   border-radius: 10px;
   box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.87);
@@ -220,22 +237,21 @@ img {
   border-radius: 10px;
 }
 .genre-container span {
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
-.not-found{
+.not-found {
   width: 100%;
   height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 .not-found h4 {
   text-align: center;
-  color:#7e57c2
+  color: #7e57c2;
 }
 .not-found div {
   width: 200px;
 }
-

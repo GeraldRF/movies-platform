@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="rating">
-          <span>{{ movie.vote_average }}</span>
+          <span> {{ movie.vote_average }}</span>
         </div>
       </div>
     </div>
