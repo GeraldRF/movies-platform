@@ -1,8 +1,12 @@
 <template>
   <div class="col s12 m8 push-m2 l5 push-l1">
     <div class="card row">
+      <div class="options-container">
+        <i class="material-icons">download</i>
+        <i class="material-icons">favorite</i>
+      </div>
       <router-link
-      class="col s6 m6 img-card"
+        class="col s6 m6 img-card"
         :to="{
           name: 'MovieDetails',
           params: { movieName: movie.title, id: movie.id },
@@ -11,10 +15,9 @@
           :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
           alt=""
         />
-        </router-link
-      >
+      </router-link>
       <div class="col s6 m6">
-          <h2 class="card-title">{{ movie.title }}</h2>
+        <h2 class="card-title">{{ movie.title }}</h2>
         <div class="data-container">
           <h6>Sinopsis</h6>
           <div>
@@ -32,7 +35,7 @@
             v-for="genre in movie.genre_ids"
             :key="genre"
           >
-            <span >{{
+            <span>{{
               this.genres.find((data) => data.id === genre).name
             }}</span>
           </div>
